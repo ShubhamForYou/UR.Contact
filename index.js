@@ -24,7 +24,7 @@ app.use(cookieParser());
 const PORT = process.env.PORT || 4000;
 // Routes
 const userRoutes = require("./router/auth.router");
-app.use("/api/user", userRoutes);
+app.use("/api/auth", userRoutes);
 app.listen(PORT, () => {
   console.log("Server connected 🟢");
   console.log(`http://localhost:${PORT}`);

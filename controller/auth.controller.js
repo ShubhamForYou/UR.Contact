@@ -19,7 +19,7 @@ const uploadToCloudinary = async (bufferFile) => {
 };
 
 // @desc user-signin
-// @route POST /api/user/signin
+// @route POST /api/auth/signin
 const signin = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -56,7 +56,7 @@ const signin = async (req, res) => {
 };
 
 // @desc user-login
-// @route POST /api/user/login
+// @route POST /api/auth/login
 
 const login = async (req, res) => {
   try {
@@ -92,7 +92,7 @@ const login = async (req, res) => {
   }
 };
 // @desc user-logout
-// @route GET /api/user/logout
+// @route GET /api/auth/logout
 const logout = async (req, res) => {
   try {
     await res.clearCookie("auth");
