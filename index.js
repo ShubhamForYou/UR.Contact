@@ -23,7 +23,7 @@ app.use(cookieParser());
 // Create server on PORT
 const PORT = process.env.PORT || 4000;
 // Routes
-const userRoutes = require("./router/auth.router");
+const userRoutes = require("./routes/auth.router");
 app.use("/api/auth", userRoutes);
 app.listen(PORT, () => {
   console.log("Server connected 🟢");
