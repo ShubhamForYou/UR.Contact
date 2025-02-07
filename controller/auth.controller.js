@@ -82,7 +82,7 @@ const login = async (req, res) => {
       res.cookie("auth", token);
       return res
         .status(200)
-        .json({ msg: `welcome ${user.name}`, token: token });
+        .json({ msg: `welcome ${user.name}`, token: token, user: user });
     } else {
       return res.status(401).json({ err: "Enter valid Email and Password" });
     }
